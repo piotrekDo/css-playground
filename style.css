@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.draw {
+  height: 100vh;
+  background-color: #eee;
+  position: relative;
+  border-bottom: 10px solid red;
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.truck {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  border-radius: 20px 20px 0 0;
+}
+
+.windshield {
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  left: 0;
+  right: 0;
+  margin: 10% auto;
+  background-color: rgb(116, 227, 240);
+  border-radius: 10px 10px 0 0;
+}
+
+.windshield::after {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  content: '';
+  width: 30px;
+  height: 10px;
+  transform: rotate(20deg);
+  background-color: white;
+  border-radius: 20px;
+}
+
+.grill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  margin: 0 auto;
+  width: 80%;
+  height: 5px;
+  background-color: black;
+}
+
+.grill:before {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  top: 20px;
+}
+
+.grill:after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  top: 40px;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  /* background-color: red; */
+  /* border-top: 60px solid blue; */
+  border-right: 160px solid transparent;
+  border-bottom: 260px solid yellowgreen;
+  border-left: 160px solid transparent;
+  border-radius: 50% 100% 100% 100%;
+}
+
+.open-box {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+}
+
+.open-box:after {
+  bottom: 0;
+  right: 0;
+  content: '';
+  position: absolute;
+  height: 50%;
+  width: 30%;
+  background-color: red;
+}
+
+.button {
+  width: 300px;
+  height: 120px;
+  background-color: black;
+  overflow: hidden;
+  transition: transform 1s;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 120px;
+    color: wheat;
+    transition: top 1s;
+}
+
+.button:after {
+    position: absolute;
+    content: "CLICK!";
+    color: black;
+    font-size: 2rem;
+    background-color: wheat;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 120px;
+    transition: top 1s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.button:hover::after {
+    top: 0;
+    transition: top 1s;
+}
+
+.button:hover > .text {
+    top: -100%;
+    transition: top 1s;
+}

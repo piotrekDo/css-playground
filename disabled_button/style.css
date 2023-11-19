@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 50px;
+    background-color: #ccc;
+}
+
+button {
+    
+}
+
+.moveRight {
+    transform: translateX(200px);
+    transition: transform 500ms;
+}
+
+.moveLeft {
+    transform: translateX(0);
+    transition: transform 500ms;
+}

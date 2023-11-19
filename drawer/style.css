@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: #ccc;
+    height: 200vh;
+}
+
+.drawer {
+    position: fixed;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: aqua;
+    transition: right 500ms;
+}
+
+.icon__text {
+    background-color: aqua;
+    position: relative;
+    left: -60px;
+    height: 60px;
+}
+
+.drawer:hover,
+.drawer:active,
+.drawer .icon:hover,
+.drawer .icon:active {
+    right: 0;
+}
+
